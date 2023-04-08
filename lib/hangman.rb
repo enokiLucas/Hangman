@@ -1,7 +1,8 @@
 file = File.read("../english_words.txt")
 word = File.readlines("../english_words.txt")
 
-#puts word.is_a?(Array) => true
+=begin
+puts word.is_a?(Array) => true
 
 File.open("words_5-12.txt", "w") do |file|
 	word.each do |word|
@@ -10,3 +11,4 @@ File.open("words_5-12.txt", "w") do |file|
 		end
 	end
 end
+=end
