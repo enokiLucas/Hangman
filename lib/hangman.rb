@@ -13,6 +13,7 @@ File.open("words_5-12.txt", "w") do |file|
 end
 =end
 
+=begin
 def display_stickman_with_legs
   puts "     o      "
   puts "    /|\\     "
@@ -23,3 +24,5 @@ def display_stickman_with_legs
 end
 
 display_stickman_with_legs
+=end
+
