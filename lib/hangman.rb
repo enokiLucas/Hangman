@@ -1,15 +1,17 @@
 file = File.read("../english_words.txt")
 word = File.readlines("../english_words.txt")
 
-=begin
-puts word.is_a?(Array) => true
 
-File.open("words_5-12.txt", "w") do |file|
-	word.each do |word|
-		if 5 <= word.length && word.length <= 12 
-			file.puts word
-		end
-	end
+#puts word.is_a?(Array) => true
+
+=begin
+File.open("words_1.txt", "w") do |file|
+  word.each do |word|
+    clean_word = word.gsub(/\W+/, '') # remove any non-word characters
+    if clean_word.length.between?(5, 12)
+      file.puts clean_word
+    end
+  end
 end
 =end
 
@@ -31,3 +33,11 @@ def display_lives(lives)
 	puts "You have #{lives}"
 end
 
+def select_word
+	line = rand(1..8450)
+	secret_word = File.readlines("words_1.txt")
+	return secret_word[line]
+end
+
+secret_word = select_word
+puts secret_word
