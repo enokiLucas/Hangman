@@ -26,3 +26,8 @@ end
 display_stickman_with_legs
 =end
 
+lives = 5
+def display_lives(lives)
+	puts "You have #{lives}"
+end
+
