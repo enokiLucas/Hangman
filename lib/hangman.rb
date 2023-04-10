@@ -49,13 +49,27 @@ class Hangman
 
 	def game_end? #return true if the game end false if not
 		if @lives == 0
+			@victory = false
+			puts 'You lost.'
 			return true
 		elsif @secret_letters.include?("_") == false
+			@victory = true
+			puts 'You Won!'
 			return true
 		else
 			return false
+		end
 	end
+
+	def game_loop
+		
+	end
+
 end
+
+
+
+
 
 game = Hangman.new
 game.run
