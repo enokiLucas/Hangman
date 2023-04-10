@@ -7,10 +7,7 @@ class Hangman
 
   def run
     puts @word
-    display_letters
-    choose_letter
-    display_letters
-    display_lives
+    game_loop
   end
 
   private
@@ -62,6 +59,11 @@ class Hangman
 	end
 
 	def game_loop
+		until game_end? = true
+			choose_letter
+    	display_letters
+    	display_lives
+		end
 		
 	end
 
