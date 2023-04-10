@@ -39,5 +39,14 @@ def select_word
 	return secret_word[line]
 end
 
+def display_word(secret_word)
+	number_of_letter = secret_word.length
+
+end
+
+select_word
 secret_word = select_word
+secret_letter = Array.new(secret_word.length, "_")
+
 puts secret_word
+print secret_letter
