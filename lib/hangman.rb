@@ -59,7 +59,7 @@ class Hangman
 	end
 
 	def game_loop
-		until game_end? = true
+		until game_end? == true
 			choose_letter
     	display_letters
     	display_lives
