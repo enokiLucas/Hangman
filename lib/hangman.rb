@@ -64,7 +64,10 @@ class Hangman
     	display_letters
     	display_lives
 		end
-		
+	end
+
+	def save_game
+
 	end
 
 end
