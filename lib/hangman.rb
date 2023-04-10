@@ -46,6 +46,15 @@ class Hangman
       @lives -= 1
     end
   end
+
+	def game_end? #return true if the game end false if not
+		if @lives == 0
+			return true
+		elsif @secret_letters.include?("_") == false
+			return true
+		else
+			return false
+	end
 end
 
 game = Hangman.new
