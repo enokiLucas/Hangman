@@ -41,7 +41,7 @@ end
 
 select_word
 secret_word = select_word
-secret_letter = Array.new(secret_word.length, "_")
+secret_letter = Array.new(secret_word.length - 1, "_")
 
 def display_letters(secret_letter)
 	secret_letter.each do |letter|
@@ -49,4 +49,17 @@ def display_letters(secret_letter)
 	end
 end
 
+def choose_letter(secret_word, secret_letter)
+	print "Choose a letter: "
+	choosen_letter = gets.chomp
+	secret_word.chars.each_with_index do |letter, i|
+		if letter == choosen_letter
+			secret_letter[i] = choosen_letter
+		end
+	end
+end
+
+puts secret_word
+display_letters(secret_letter)
+choose_letter(secret_word, secret_letter)
 display_letters(secret_letter)
